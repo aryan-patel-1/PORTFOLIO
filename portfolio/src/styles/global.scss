@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
 :root {
   --background: #ffffff;
   --text: #1a1a1a;
   --primary: #0047ab;
   --accent: #0066ff;
-  --font-main: 'Poppins', sans-serif;
+  --font-main: 'Inter', sans-serif;
 }
 
 * {
@@ -17,20 +19,9 @@ body {
   font-family: var(--font-main);
   background-color: var(--background);
   color: var(--text);
+  line-height: 1.6;
 }
 
 section {
   padding: 5rem 2rem;
-  color: var(--text);
-}
-
-/* Mode sombre */
-body.dark {
-  --background: #121212;
-  --text: #f1f1f1;
-  --primary: #eeeeee;
-  --accent: #3399ff;
-
-  background-color: var(--background);
-  color: var(--text);
 }

@@ -1,61 +1,70 @@
 .hero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    text-align: center;
-    background: var(--background);
-    color: var(--primary);
-    padding: 2rem;
-  
-    .hero-content {
-      max-width: 800px;
-  
-      h1 {
-        font-size: 3rem;
-        margin-bottom: 0.5rem;
-      }
-  
-      h2 {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-        font-weight: 400;
-      }
-  
-      p {
-        font-size: 1rem;
-        margin-bottom: 2rem;
-        color: var(--text);
-      }
-  
-      .cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 2rem;
+  background: var(--background);
+  text-align: center;
+
+  .hero-content {
+    max-width: 800px;
+
+    .hero-greeting {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+
+      .wave {
         display: inline-block;
-        padding: 0.75rem 1.5rem;
-        border: 2px solid var(--primary);
-        color: var(--primary);
-        text-decoration: none;
-        border-radius: 5px;
-        transition: background 0.3s;
-  
-        &:hover {
-          background: var(--primary);
-          color: white;
-        }
+        animation: wave-animation 2s infinite;
+        transform-origin: 70% 70%;
+      }
+
+      @keyframes wave-animation {
+        0% { transform: rotate(0deg); }
+        10% { transform: rotate(14deg); }
+        20% { transform: rotate(-8deg); }
+        30% { transform: rotate(14deg); }
+        40% { transform: rotate(-4deg); }
+        50% { transform: rotate(10deg); }
+        60% { transform: rotate(0deg); }
+        100% { transform: rotate(0deg); }
       }
     }
-  
-    @media (max-width: 768px) {
-      .hero-content h1 {
-        font-size: 2.2rem;
-      }
-  
-      .hero-content h2 {
-        font-size: 1.2rem;
-      }
-  
-      .hero-content p {
-        font-size: 0.95rem;
+
+    .hero-name {
+      font-size: 3.5rem;
+      font-weight: bold;
+      background: linear-gradient(90deg, #0047ab, #00c6ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin: 0.2rem 0;
+    }
+
+    .hero-title {
+      font-size: 1.5rem;
+      color: var(--text);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-description {
+      font-size: 1.1rem;
+      color: var(--text);
+      margin-bottom: 2rem;
+    }
+
+    .hero-cta {
+      display: inline-block;
+      padding: 0.8rem 1.5rem;
+      background-color: #0047ab;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      transition: background 0.3s ease;
+
+      &:hover {
+        background-color: #003480;
       }
     }
   }
-  
+}
