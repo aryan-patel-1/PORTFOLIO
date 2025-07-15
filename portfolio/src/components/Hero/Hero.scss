@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: center;
   padding: 8rem 2rem;
-  background: var(--background);
+  background-color: #f4f4f4;
   text-align: center;
 
   .hero-content {
@@ -37,6 +37,7 @@
       font-weight: bold;
       background: linear-gradient(90deg, #0047ab, #00c6ff);
       -webkit-background-clip: text;
+      background-clip: text;
       -webkit-text-fill-color: transparent;
       margin: 0.2rem 0;
     }

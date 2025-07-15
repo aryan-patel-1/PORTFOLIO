@@ -8,9 +8,20 @@ export default function Navbar() {
   const handleToggle = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    closeMenu();
+  };
+
   return (
     <nav className="navbar">
-      <img src={logo} alt="Logo" className="logo" />
+      <img
+        src={logo}
+        alt="Logo"
+        className="logo"
+        onClick={scrollToTop}
+        style={{ cursor: "pointer" }}
+      />
 
       <div className={`nav-links ${isOpen ? "open" : ""}`}>
         <a href="#hero" onClick={closeMenu}>Accueil</a>
@@ -27,7 +38,7 @@ export default function Navbar() {
             <i className="fab fa-github"></i>
           </a>
           <a
-            href="https://www.linkedin.com/in/ton-profile"
+            href="https://www.linkedin.com/in/aryan-patel-a10479374/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
